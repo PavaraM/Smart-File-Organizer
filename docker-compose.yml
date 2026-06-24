@@ -1,0 +1,23 @@
+version: "3.9"
+services:
+  organizer:
+    build: .
+    image: smart-file-organizer:latest
+    container_name: sfo
+    volumes:
+      - ./tests/fixtures:/data:ro
+    command: ["/data"]
+    profiles:
+      - test
+
+  dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: smart-file-organizer:latest
+    container_name: sfo-dev
+    volumes:
+      - ./fixfolder.sh:/usr/local/bin/fixfolder:ro
+      - ./tests/fixtures:/data:rw
+    profiles:
+      - dev

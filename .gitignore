@@ -1,0 +1,33 @@
+# === OS files ===
+.DS_Store
+.DS_Store?
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# === IDE / Editor ===
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.nvim/
+
+# === Logs / Temp ===
+*.log
+tmp/
+temp/
+
+# === Test artifacts ===
+tests/fixtures/
+tests/*.log
+
+# === Build artifacts ===
+dist/
+*.deb
+*.rpm
+
+# === Environment ===
+.env
+.env.local
